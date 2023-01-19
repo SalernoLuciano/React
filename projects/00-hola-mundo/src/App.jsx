@@ -1,5 +1,5 @@
 // import './App.css'
-import { TwitterFollowCard } from "./TwitterFollowCard"
+import { TwitterFollowCard } from './TwitterFollowCard'
 
 const users = [
   {
@@ -24,10 +24,9 @@ const users = [
   }
 ]
 
-export function App() {
-
+export function App () {
   return (
-    <section className="App">
+    <section className='App'>
 
       {
         users.map(({ userName, name, isFolowing }) => (
@@ -42,6 +41,6 @@ export function App() {
         ))
       }
 
-    </section >
+    </section>
   )
 }

@@ -1,6 +1,6 @@
-import { WINNER_COMBOS } from "../constants"
+import { WINNER_COMBOS } from '../constants'
 // Chequeo cada posible solucion parasaber si gano alguno
-export function checkWinnerFrom(boardToCheck) {
+export function checkWinnerFrom (boardToCheck) {
   for (const combo of WINNER_COMBOS) {
     const [a, b, c] = combo
     if (
@@ -15,6 +15,6 @@ export function checkWinnerFrom(boardToCheck) {
   return null
 }
 
-export function checkEndGame( boardToCheck ){
-  return boardToCheck.every( square => square !== null )
+export function checkEndGame (boardToCheck) {
+  return boardToCheck.every(square => square !== null)
 }
