@@ -5,6 +5,7 @@ function FollowMouse () {
   const [enable, setEnable] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
+  // Efecto Pointer move
   useEffect(() => {
     function handleMove (event) {
       const { clientX, clientY } = event
@@ -19,6 +20,14 @@ function FollowMouse () {
     // Se ejecuta siempre que se desmonta el componente y cada vez que cambie la dependencia
     return () => {
       window.removeEventListener('pointermove', handleMove)
+    }
+  }, [enable])
+
+  // Efecto change body className
+  useEffect(() => {
+    document.body.classList.toggle('no-cursor', enable)
+    return () => {
+      document.body.classList.remove('no-cursor')
     }
   }, [enable])
 
